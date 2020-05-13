@@ -16,11 +16,13 @@ submitBtn.onclick=function()
     {
         nameError.innerHTML="Name is required" ;
         urlError.innerHTML="Url Field is required";
+        
     }
 
     else if(siteName.value=="")
     {
         nameError.innerHTML="Name is required" ;
+        
     }
 
     else if( siteUrl.value=="")
@@ -33,6 +35,7 @@ submitBtn.onclick=function()
     {
      addSite();
      clear();
+     clearError();
      show();
     }
  
@@ -73,7 +76,12 @@ function clear()
 }
 
 
+function clearError()
+{
 
+    nameError.innerHTML="" ;
+    urlError.innerHTML="";
+}
 
 function show()
 {
